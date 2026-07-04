@@ -3,7 +3,7 @@ function spriteRunner(){
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
 
-    if (keys['KeyA'] && keys['KeyD']) {
+    if (keys['KeyA'] && keys['KeyD'] && person.isJamp == 0) {
         person.y_padding = 0;
         person_AFK();
         fondraw();
