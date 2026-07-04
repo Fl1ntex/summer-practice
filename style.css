@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .game {
@@ -14,4 +15,50 @@ body {
 #canvas {
     border: 5px black solid;
     border-radius: 20px;
+}
+
+.green{
+    width:12%;
+    height: 35%;
+}
+@keyframes pulse {
+    0%{ transform: scale(2);}  
+    50% { transform: scale(1); }  
+    100%{ transform: scale(2); } 
+}
+
+.green {
+  animation: pulse 4s infinite ease-in-out;
+}
+.frame {
+  position: relative; /* Важно для позиционирования псевдоэлементов */
+  /* остальные ваши стили рамки */
+}
+
+/* Ветка НАД рамкой */
+.game::before {
+  content: '';
+  position: absolute;
+  top: -50px; /* Поднимите выше */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px; 
+  height: 300px; 
+  background: url('img/vetka.png') no-repeat center/contain;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+/* Ветка ПОД рамкой */
+.game::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* Опустите ниже */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 350px;
+  background: url('img/vetka.png') no-repeat center/contain;
+  pointer-events: none;
+  z-index: 1;
 }

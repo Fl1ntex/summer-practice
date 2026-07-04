@@ -1,3 +1,4 @@
+
 let context = canvas.getContext('2d');
 let bg = new Image();
 let runner = new Image();
