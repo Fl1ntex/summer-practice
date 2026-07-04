@@ -3,11 +3,11 @@ function spriteRunner(){
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
 
-    if (keys['KeyA'] && keys['KeyD']) {
+    if (keys['KeyA'] && keys['KeyD']) { // если A и D зажаты 
         person.y_padding = 0;
-        person_AFK();
+        person_AFK();  // в любом случае проигрываем аницмаю моргания 
         
-        if (keys["Space"] && person.isJamp == false){
+        if (keys["Space"] && person.isJamp == false){ // если нажат пробел прыгаем 
             person.isJamp = true;
             person.jumpTick = 0;
         }
@@ -55,12 +55,13 @@ function spriteRunner(){
             person.x_padding += 120;
         }
     }
-    else{
+
+    else{ // если ни одна кнопка не нажата аницмаци моргания 
         person.y_padding = 0;
         person_AFK();
     }
 
-    if (!keys['KeyA'] && !keys['KeyD']) {
+    if (!keys['KeyA'] && !keys['KeyD']) {  // если A и D зажаты анимаци моргания 
         person.y_padding = 0;
         person_AFK();
     }
