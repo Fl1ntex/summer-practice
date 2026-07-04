@@ -36,7 +36,7 @@ function fondraw(){
 }
 
 function tick(){
-    if(person.tick_count > 3){
+    if(person.tick_count > 5){
         spriteRunner();
         person.tick_count = 0;
     }
