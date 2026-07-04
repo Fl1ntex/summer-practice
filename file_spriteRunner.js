@@ -3,13 +3,24 @@ function spriteRunner(){
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
 
-    if (keys['KeyA'] && keys['KeyD'] && person.isJamp == 0) {
+    if (keys['KeyA'] && keys['KeyD']) {
         person.y_padding = 0;
         person_AFK();
+        
+        if (keys["Space"] && person.isJamp == false){
+            person.isJamp = true;
+            person.jumpTick = 0;
+        }
+       
+        if (person.isJamp) {
+            jumpFunction();
+        }
+        
         fondraw();
         context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, person.x_razmer_na_canvas, person.y_razmer_na_canvas);
         return;
     }
+    
 
     if (keys['KeyA']) {
         if (person.x_pos > centerX) {
