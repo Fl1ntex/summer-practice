@@ -19,21 +19,17 @@ let person = {
     x_pos: 0,
     y_pos: 350,
     isJamp: false,
-    jumpTick: 0
+    jumpTick: 0,
+    x_razmer_na_canvas: 80,
+    y_razmer_na_canvas: 87
 }
 
 let keys = {};
-
-
-
-
-
 
 bg.onload = function(){
     fondraw();
     tick();
 }
-
 
 
 addEventListener("keydown", function(key){
