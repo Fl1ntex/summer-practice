@@ -5,8 +5,10 @@ let runner = new Image();
 bg.src = "img/fon.png";
 runner.src = "img/person.png";
 
-let step_shag = 15;
-let step_jump = 15;
+let step_shag = 18;
+let step_jump = 20;
+let bgOffset = 0;
+let mapLength = canvas.width *7;
 
 
 let person = {
@@ -14,16 +16,12 @@ let person = {
     y_padding: 0,
     tick_count: 0,
     x_pos: 0,
-    y_pos: 320,
+    y_pos: 350,
     isJamp: false,
     jumpTick: 0
 }
 
 let keys = {};
-
-
-
-
 
 
 bg.onload = function(){
@@ -32,19 +30,19 @@ bg.onload = function(){
 }
 
 function fondraw(){
-    context.drawImage(bg, 0, 0);
+    for (let i = 0; i < 9; i++) {
+        context.drawImage(bg, bgOffset + i * bg.width, 0);
+    }
 }
 
 function tick(){
-    if (person.tick_count > 20){
-        spriteRunner(context, canvas, runner, person, keys, step_shag, step_jump, fondraw);
+    if(person.tick_count > 3){
+        spriteRunner();
         person.tick_count = 0;
     }
-    person.tick_count += 1;
+    person.tick_count+=1;
     requestAnimationFrame(tick);
 }
-
-
 
 addEventListener("keydown", function(key){
     keys[key.code] = true;

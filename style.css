@@ -1,0 +1,17 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(20, 100, 0, 0.842);
+}
+
+#canvas {
+    border: 5px black solid;
+    border-radius: 20px;
+}
