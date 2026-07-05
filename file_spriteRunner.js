@@ -3,17 +3,17 @@ function spriteRunner(){
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
     
-     if (keys["Escape"] == true && !escapePressed) {
+     if (keys["Escape"] == true && !escapePressed) {  // если нажат Esc и не стоит пауза 
         escapePressed = true;
         togglePause();
         return;
     }
 
-    if (keys["Escape"] == false) {
+    if (keys["Escape"] == false) {  // Esc отпустили 
         escapePressed = false;
     }
 
-    if (isPaused) {
+    if (isPaused) {   // стоит пауза 
         return;
     }
 
