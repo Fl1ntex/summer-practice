@@ -3,7 +3,17 @@ function spriteRunner(){
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
     
-    if (isPaused==true){
+     if (keys["Escape"] == true && !escapePressed) {
+        escapePressed = true;
+        togglePause();
+        return;
+    }
+
+    if (keys["Escape"] == false) {
+        escapePressed = false;
+    }
+
+    if (isPaused) {
         return;
     }
 

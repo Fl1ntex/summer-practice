@@ -1,12 +1,5 @@
 const pauseScreen = document.getElementById('pause-screen');
 
-// Переключение паузы по ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        togglePause();
-    }
-});
-
 function togglePause() {
   if (!gameRunning) return;
 
