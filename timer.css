@@ -1,0 +1,12 @@
+.Timer {
+    position: absolute;
+    color: aliceblue;
+    margin-left: 800px;
+    margin-bottom: 450px;
+    font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  color: rgb(255, 255, 255);                    /* классический «зелёный экран» */
+  text-shadow: 0 2px 0 #000,
+               0 4px 0 rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+}

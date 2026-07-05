@@ -9,13 +9,15 @@ document.addEventListener('keydown', (e) => {
 });
 
 function togglePause() {
-    if (!gameRunning) return; // не ставим на паузу, если игра ещё не началась
+  if (!gameRunning) return;
 
-    isPaused = !isPaused;
+  isPaused = !isPaused;
 
-    if (isPaused) {
-        pauseScreen.classList.add('active');
-    } else {
-        pauseScreen.classList.remove('active');
-    }
+  if (isPaused) {
+    pauseScreen.classList.add('active');
+    taymer_stop(); // останавливаем таймер
+  } else {
+    pauseScreen.classList.remove('active');
+    taymer_start(); // продолжаем с тех же minutes/seconds
+  }
 }
