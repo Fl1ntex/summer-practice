@@ -57,14 +57,32 @@ function spriteRunner(){
         }
     }
 
-    if (keys["Digit1"] == true && attackCooldown <= 0){     // нажата 1 и кд прошло
+    if (keys["Digit1"] == true && attackCooldown <= 0){     
         strely.push({
             x: person.x_pos + person.x_razmer_na_canvas,
-            y: person.y_pos 
+            y: person.y_pos ,
+            num: 1
         });
         kolichestvo_strel += 1;
         attackCooldown = attackDelay; // сбрасываем задержку
     }
-
+    if (keys["Digit3"] == true && attackCooldown <= 0){    
+        strely.push({
+            x: person.x_pos + person.x_razmer_na_canvas,
+            y: person.y_pos ,
+            num: 2
+        });
+        kolichestvo_strel += 1;
+        attackCooldown = attackDelay; // сбрасываем задержку
+    }   
+    if (keys["Digit4"] == true && attackCooldown <= 0){     
+        strely.push({
+            x: person.x_pos + person.x_razmer_na_canvas,
+            y: person.y_pos ,
+            num: 3
+        });
+        kolichestvo_strel += 1;
+        attackCooldown = attackDelay; // сбрасываем задержку
+    }
   
 }

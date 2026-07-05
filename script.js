@@ -1,9 +1,15 @@
 let context = canvas.getContext('2d');
 let bg = new Image();
 let runner = new Image();
-let strela = new Image();
 
-strela.src = "img/strela_1.PNG"
+let strela1 = new Image();
+let strela2 = new Image();
+let strela3 = new Image();
+
+strela1.src = "img/strela_1.PNG"
+strela2.src = "img/strela_2.PNG"
+strela3.src = "img/strela_3.PNG"
+
 bg.src = "img/fon.png";
 runner.src = "img/person.png";
 

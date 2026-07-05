@@ -23,7 +23,19 @@ function tick(){
     }
 
     for (let i = 0; i < strely.length; i++) {
-        context.drawImage(strela, 0, 0, 1024, 1024, strely[i].x, strely[i].y, 100, 100);
+        switch(strely[i].num){
+            case 1:
+                context.drawImage(strela1, 0, 0, 1024, 1024, strely[i].x, strely[i].y, 100, 100);
+                break
+            case 2:
+                context.drawImage(strela2, 0, 0, 1024, 1024, strely[i].x, strely[i].y, 100, 100);
+                break
+            case 3:
+                context.drawImage(strela3, 0, 0, 1024, 1024, strely[i].x, strely[i].y, 100, 100);
+                break
+        
+        }
+        
     }
     person.tick_count += 1;
     requestAnimationFrame(tick);
