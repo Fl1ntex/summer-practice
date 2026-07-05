@@ -17,6 +17,8 @@ startBtn.addEventListener('click', () => {
     }
     startScreen.style.display = 'none';
     gameRunning = true;
+
+    taymer_start();
 });
 
 nicknameInput.addEventListener('keydown', (e) => {
