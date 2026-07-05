@@ -80,5 +80,4 @@ function spriteRunner(){
         attackCooldown = attackDelay; // сбрасываем задержку
     }
 
-  
 }
