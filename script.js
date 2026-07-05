@@ -1,8 +1,9 @@
 let context = canvas.getContext('2d');
 let bg = new Image();
 let runner = new Image();
+let strela = new Image();
 
-
+strela.src = "img/strela_1.PNG"
 bg.src = "img/fon.png";
 runner.src = "img/person.png";
 
@@ -12,6 +13,13 @@ let bgOffset = 0;
 let mapLength = canvas.width * 7;
 let isPaused = false;
 let escapePressed = false;
+
+let kolichestvo_strel = 0;
+let strely = []; // массив для хранения стрел
+let speed_strel = 15; //  скорость полёта стрелы
+
+let attackCooldown = 0; // кд по русски 
+let attackDelay = 55;   // кадров между выстрелами
 
 let person = {
     x_padding: 0,

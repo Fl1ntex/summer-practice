@@ -56,5 +56,15 @@ function spriteRunner(){
             person.x_padding += 120;
         }
     }
+
+    if (keys["Digit1"] == true && attackCooldown <= 0){     // нажата 1 и кд прошло
+        strely.push({
+            x: person.x_pos + person.x_razmer_na_canvas,
+            y: person.y_pos 
+        });
+        kolichestvo_strel += 1;
+        attackCooldown = attackDelay; // сбрасываем задержку
+    }
+
   
 }
