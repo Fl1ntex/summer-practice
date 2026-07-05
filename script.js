@@ -31,6 +31,8 @@ let attackCooldown = 0; // кд по русски
 let attackDelay = 55;   // кадров между выстрелами
 
 let person = {
+    HP: 100,
+    MP: 100, // шкала жизни и магической энергии
     x_padding: 0,
     y_padding: 0,
     tick_count: 0,

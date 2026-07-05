@@ -14,6 +14,7 @@ startBtn.addEventListener('click', () => {
     const nick = nicknameInput.value.trim();
     if (nick) {
         playerNickname = nick;
+        document.getElementById('name_player').textContent = nick;  // теперь ник отображается 
     }
     startScreen.style.display = 'none';
     gameRunning = true;
@@ -24,4 +25,3 @@ startBtn.addEventListener('click', () => {
 nicknameInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') startBtn.click();
 });
-
