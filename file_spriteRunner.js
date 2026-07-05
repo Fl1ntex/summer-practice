@@ -42,7 +42,5 @@ function spriteRunner(){
             person.x_padding += 120;
         }
     }
-    
-    fondraw();
-    context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, person.x_razmer_na_canvas, person.y_razmer_na_canvas);
+  
 }
