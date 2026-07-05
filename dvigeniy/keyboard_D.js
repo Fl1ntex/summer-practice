@@ -1,0 +1,17 @@
+function key_on_D(centerX, worldX){
+    if (person.x_pos < centerX) {
+        person.x_pos += step_shag;
+    } else if (-bgOffset + canvas.width < mapLength) {
+        bgOffset -= step_shag;
+        person.x_pos = centerX;
+    } else if (worldX + 80 < mapLength) {
+        person.x_pos += step_shag;
+    }
+    person.y_padding = 910;
+    if (person.x_padding >= 1080) {
+        person.x_padding = 0;
+    } else {
+        person.x_padding += 120;
+    }
+}
+    
