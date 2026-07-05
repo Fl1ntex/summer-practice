@@ -4,46 +4,16 @@ function spriteRunner(){
     let worldX = person.x_pos - bgOffset;
 
     if (keys['KeyA'] && keys['KeyD']) { // если A и D зажаты 
-        person.y_padding = 0;
-        person_AFK();  // в любом случае проигрываем аницмаю моргания 
-        
-        if (keys["Space"] && person.isJamp == false){ // если нажат пробел прыгаем 
-            person.isJamp = true;
-            person.jumpTick = 0;
-        }
-       
-        if (person.isJamp) {
-            jumpFunction();
-        }
-        
-        fondraw();
-        context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, person.x_razmer_na_canvas, person.y_razmer_na_canvas);
+        key_on_AD(centerX, worldX);
         return;
     }
-    
 
     if (keys['KeyA']) {
-        if (person.x_pos > centerX) {
-            person.x_pos -= step_shag;
-        } else if (bgOffset < 0) {
-            bgOffset += step_shag;
-            person.x_pos = centerX; 
-        } else if (worldX > 0) {
-            person.x_pos -= step_shag;
-        }
-        person.y_padding = 650;
+        key_on_A(centerX, worldX);
     }
     
     else if (keys['KeyD']) {
-        if (person.x_pos < centerX) {
-            person.x_pos += step_shag;
-        } else if (-bgOffset + canvas.width < mapLength) {
-            bgOffset -= step_shag;
-            person.x_pos = centerX;
-        } else if (worldX + 80 < mapLength) {
-            person.x_pos += step_shag;
-        }
-        person.y_padding = 910;
+        key_on_D(centerX, worldX);
     }
 
     else{ // если ни одна кнопка не нажата аницмаци моргания 
@@ -61,8 +31,6 @@ function spriteRunner(){
         person.jumpTick = 0;
     }
 
-    
-
     if (person.isJamp) {
         jumpFunction();
     }
@@ -74,8 +42,6 @@ function spriteRunner(){
             person.x_padding += 120;
         }
     }
-    
-    
     
     fondraw();
     context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, person.x_razmer_na_canvas, person.y_razmer_na_canvas);
