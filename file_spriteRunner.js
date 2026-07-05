@@ -57,32 +57,28 @@ function spriteRunner(){
         }
     }
 
-    if (keys["Digit1"] == true && attackCooldown <= 0){     
+
+    if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0){
+
+        if (keys["Digit1"] == true) {
+            number_strelu = 1;
+        } 
+        else if (keys["Digit3"] == true) {
+            number_strelu = 2;
+        } 
+        else if (keys["Digit4"] == true) {
+            number_strelu = 3;
+        }
+
         strely.push({
             x: person.x_pos + person.x_razmer_na_canvas,
             y: person.y_pos ,
-            num: 1
+            num: number_strelu
         });
+
         kolichestvo_strel += 1;
         attackCooldown = attackDelay; // сбрасываем задержку
     }
-    if (keys["Digit3"] == true && attackCooldown <= 0){    
-        strely.push({
-            x: person.x_pos + person.x_razmer_na_canvas,
-            y: person.y_pos ,
-            num: 2
-        });
-        kolichestvo_strel += 1;
-        attackCooldown = attackDelay; // сбрасываем задержку
-    }   
-    if (keys["Digit4"] == true && attackCooldown <= 0){     
-        strely.push({
-            x: person.x_pos + person.x_razmer_na_canvas,
-            y: person.y_pos ,
-            num: 3
-        });
-        kolichestvo_strel += 1;
-        attackCooldown = attackDelay; // сбрасываем задержку
-    }
+
   
 }

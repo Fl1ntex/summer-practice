@@ -13,6 +13,9 @@ strela3.src = "img/strela_3.PNG"
 bg.src = "img/fon.png";
 runner.src = "img/person.png";
 
+
+let number_strelu = 1;
+
 let step_shag = 18;
 let step_jump = 20;
 let bgOffset = 0;
