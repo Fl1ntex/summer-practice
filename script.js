@@ -10,7 +10,7 @@ let step_shag = 18;
 let step_jump = 20;
 let bgOffset = 0;
 let mapLength = canvas.width * 7;
-
+let isPaused = false;
 
 let person = {
     x_padding: 0,

@@ -2,6 +2,10 @@ function spriteRunner(){
     
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
     let worldX = person.x_pos - bgOffset;
+    
+    if (isPaused==true){
+        return;
+    }
 
     if (keys['KeyA'] && keys['KeyD']) { // если A и D зажаты 
         key_on_AD(centerX, worldX);

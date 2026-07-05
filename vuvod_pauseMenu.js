@@ -1,5 +1,5 @@
 const pauseScreen = document.getElementById('pause-screen');
-let isPaused = false;
+
 
 // Переключение паузы по ESC
 document.addEventListener('keydown', (e) => {
