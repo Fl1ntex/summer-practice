@@ -5,7 +5,7 @@
   margin-bottom: 490px;
   width: 700px;
   height: 120px;
-  background: url('img/vetka.png') no-repeat center/contain;
+  background: url('../img/vetka.png') no-repeat center/contain;
   transform: rotate(180deg);
   z-index: 9;
 }
@@ -17,6 +17,6 @@
   margin-top: 490px;
   width: 700px;
   height: 120px;
-  background: url('img/vetka.png') no-repeat center/contain;
+  background: url('../img/vetka.png') no-repeat center/contain;
   z-index: 9;
 }
