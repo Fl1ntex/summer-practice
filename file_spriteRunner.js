@@ -32,11 +32,6 @@ function spriteRunner(){
             person.x_pos -= step_shag;
         }
         person.y_padding = 650;
-        if (person.x_padding >= 1080) {
-            person.x_padding = 0;
-        } else {
-            person.x_padding += 120;
-        }
     }
     
     else if (keys['KeyD']) {
@@ -49,11 +44,6 @@ function spriteRunner(){
             person.x_pos += step_shag;
         }
         person.y_padding = 910;
-        if (person.x_padding >= 1080) {
-            person.x_padding = 0;
-        } else {
-            person.x_padding += 120;
-        }
     }
 
     else{ // если ни одна кнопка не нажата аницмаци моргания 

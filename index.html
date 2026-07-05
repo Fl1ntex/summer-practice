@@ -2,12 +2,16 @@
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="decor.css">
+    <link rel="stylesheet" href="pause.css">
+    <link rel="stylesheet" href="startMenu.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
 </head>
 <body>
 
+    <!-- Начальное меню -->
     <div id="start-menu" class="start-menu">
         <h1>Игра</h1>
         <div class="option">
@@ -29,16 +33,27 @@
         <button id="start-btn" disabled>Начать игру</button>    
     </div>
 
-    <div class="game">
-        <img src="img/tree.png" alt="" class="green">
-        <canvas id="canvas" width="900" height="493"></canvas>
-        <img src="img/tree.png" alt="" class="green">
+    <!-- Пауза -->
+    <div class="centre_pause">
+        <div id="pause-screen" class="pause-screen">
+            <h2>ПАУЗА</h2>
+            <p>Нажми ESC, чтобы продолжить</p>
+            <div class="control_pause">
+                    <p><span class="key">A</span> / <span class="key">D</span> - Влево / Вправо</p>
+                    <p><span class="key_space">Пробел</span> - Прыжок</p>
+            </div>
+        </div>
     </div>
 
+    <!-- Игра -->
+    <div class="game">
+        <canvas id="canvas" width="900" height="493"></canvas>
+    </div>
     
     <script src="person_afk.js" charset="UTF-8"></script>
     <script src="cnt_tick.js" charset="UTF-8"></script>
     <script src="vuvod_startMenu.js" charset="UTF-8"></script>
+    <script src="vuvod_pauseMenu.js" charset="UTF-8"></script>
     <script src="run_background.js" charset="UTF-8"></script>
     <script src="script.js" charset="UTF-8"></script>
     <script src="file_spriteRunner.js" charset="UTF-8"></script>
