@@ -8,10 +8,5 @@ function key_on_D(centerX, worldX){
         person.x_pos += step_shag;
     }
     person.y_padding = 910;
-    if (person.x_padding >= 1080) {
-        person.x_padding = 0;
-    } else {
-        person.x_padding += 120;
-    }
 }
     
