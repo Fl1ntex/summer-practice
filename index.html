@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/pause.css">
     <link rel="stylesheet" href="style/startMenu.css">
     <link rel="stylesheet" href="style/timer.css">
+    <link rel="stylesheet" href="style/nick.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
@@ -46,12 +47,17 @@
         </div>
     </div>
 
+    <!-- рамка -->
+    <div class="frame">
+        <img src="img/frame.PNG">
+    </div>
+
     <!-- Игра -->
     <div class="game">
         <canvas id="canvas" width="900" height="493"></canvas>
+        <div id = "name_player" class="Nick">Nick</div>
         <div id="timerDisplay" class="Timer">00:00</div> <!--  id не менять -->
     </div>
-    <div id = "name_player">Nick</div>
     
     <script src="dvigeniy/person_afk.js" charset="UTF-8"></script>
     <script src="taymer.js" charset="UTF-8"></script>

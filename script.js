@@ -36,7 +36,7 @@ let person = {
     x_padding: 0,
     y_padding: 0,
     tick_count: 0,
-    x_pos: 0,
+    x_pos: 20,
     y_pos: 350,
     isJamp: false,
     jumpTick: 0,

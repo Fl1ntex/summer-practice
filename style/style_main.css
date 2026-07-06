@@ -1,10 +1,13 @@
 html {
-    background: rgba(20, 100, 0, 0.842);
+    background-image: url(../img/fonProject.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
     padding: 0;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .game {
@@ -16,5 +19,4 @@ body {
 
 #canvas {
     border: 5px black solid;
-    border-radius: 20px;
 }
