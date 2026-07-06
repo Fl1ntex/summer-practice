@@ -7,6 +7,6 @@ function key_on_D(centerX, worldX){
     } else if (worldX + 80 < mapLength) {
         person.x_pos += step_shag;
     }
-    person.y_padding = 910;
+    person.y_padding = 913; // 784 для бега с щитом
 }
     

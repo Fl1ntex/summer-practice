@@ -7,5 +7,5 @@ function key_on_A(centerX, worldX){
         } else if (worldX > 0) {
             person.x_pos -= step_shag;
         }
-        person.y_padding = 650;
+        person.y_padding = 653; //523 для бега с щитом
 }
