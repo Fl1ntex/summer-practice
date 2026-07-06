@@ -36,4 +36,5 @@
   height: 623px;
   margin-bottom: 10px;
   pointer-events: none;
+  user-select: none;
 }
