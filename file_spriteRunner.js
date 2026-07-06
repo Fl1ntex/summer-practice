@@ -65,7 +65,7 @@ function spriteRunner(){
 
         if (keys["Digit1"] == true) {
             number_strelu = 1;
-            colvoMP = 5;
+            colvoMP = 0;
         } 
         else if (keys["Digit3"] == true) {
             number_strelu = 2;
