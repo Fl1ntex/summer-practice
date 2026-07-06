@@ -25,14 +25,21 @@ let escapePressed = false;
 
 let kolichestvo_strel = 0;
 let strely = []; // массив для хранения стрел
-let speed_strel = 15; //  скорость полёта стрелы
+let speed_strel = 12; //  скорость полёта стрелы
 
 let attackCooldown = 0; // кд по русски 
 let attackDelay = 55;   // кадров между выстрелами
 
+const max_hp = 100;
+const max_mp = 100; // максимальные хп и мп
+
+let manaLowFlash = false; // проверка хватает ли маны
+let flashTimer = 0;
+const FLASH_DURATION = 15;  // сколько времени мана будет мигать если ее не хватает
+
 let person = {
-    HP: 100,
-    MP: 100, // шкала жизни и магической энергии
+    HP: max_hp,
+    MP: max_mp, // шкала жизни и магической энергии
     x_padding: 0,
     y_padding: 0,
     tick_count: 0,

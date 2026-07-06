@@ -60,24 +60,41 @@ function spriteRunner(){
 
     if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0){
 
+        let colvoMP = 0;
+        let canAttack = false; // не можем атаковать если нет маны
+
         if (keys["Digit1"] == true) {
             number_strelu = 1;
+            colvoMP = 5;
         } 
         else if (keys["Digit3"] == true) {
             number_strelu = 2;
+            colvoMP = 10;
         } 
         else if (keys["Digit4"] == true) {
             number_strelu = 3;
+            colvoMP = 30;
         }
 
-        strely.push({
-            x: person.x_pos + person.x_razmer_na_canvas,
-            y: person.y_pos ,
-            num: number_strelu
-        });
+        if (person.MP >= colvoMP){
+            useMana(colvoMP);
+            canAttack = true;
+        }
+        else {
+            manaLowFlash = true;
+            flashTimer = FLASH_DURATION;
+        }
 
-        kolichestvo_strel += 1;
-        attackCooldown = attackDelay; // сбрасываем задержку
+        if(canAttack){
+            strely.push({
+                x: person.x_pos + person.x_razmer_na_canvas,
+                y: person.y_pos ,
+                num: number_strelu
+            });
+
+            kolichestvo_strel += 1;
+            attackCooldown = attackDelay; // сбрасываем задержку
+        }
     }
 
 }

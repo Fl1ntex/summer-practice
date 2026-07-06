@@ -15,8 +15,13 @@ function tick(){
     if (person.tick_count > 5) {
         spriteRunner();
         person.tick_count = 0;
-        person_attack_strel();
+        if (!isPaused) {
+            regenMana(0.3);
+            regenHP(0.1); // регенерация маны и здоровья
+        }
     }
+    person_attack_strel();
+    drawUI(); // отрисовка маны и хп
 
     if (attackCooldown > 0) {
         attackCooldown -= 1; // уменьшаем кд каждый кадр
