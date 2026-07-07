@@ -18,6 +18,7 @@ function tick(){
     }
     else { // если вклчюен щит рисуем дургую картинку
         afk_defecne();
+        useMana(0.15)
     }
     
     if (person.tick_count > 5) {

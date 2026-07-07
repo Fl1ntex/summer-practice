@@ -1,4 +1,5 @@
 function key_on_A(centerX, worldX){
+    if (isUsedefence) return;
     if (person.x_pos > centerX) {
             person.x_pos -= step_shag;
         } else if (bgOffset < 0) {

@@ -1,4 +1,5 @@
 function key_on_AD(centerX, worldX){
+    if (isUsedefence) return;
     person.y_padding = 0;
     person_AFK();  // в любом случае проигрываем аницмаю моргания 
     

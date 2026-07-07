@@ -1,3 +1,5 @@
+const { isValidElement } = require("react");
+
 function spriteRunner(){
     
     let centerX = canvas.width / 2 - person.x_razmer_na_canvas;
@@ -19,7 +21,7 @@ function spriteRunner(){
 
     if (keys['KeyA'] && keys['KeyD']) { // если A и D зажаты 
         key_on_AD(centerX, worldX);
-        return;
+        if (!isUsedefence) return;
     }
 
     if (keys['KeyA']) {
@@ -40,7 +42,7 @@ function spriteRunner(){
         person_AFK();
     }
 
-    if (keys['Space'] && !person.isJamp) {
+    if (keys['Space'] && !person.isJamp && !isUsedefence) {
         person.isJamp = true;
         person.jumpTick = 0;
     }
