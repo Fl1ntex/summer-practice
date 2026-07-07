@@ -11,7 +11,8 @@ function tick(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     fondraw();
 
-    if (!isPaused) isUsedefence = keys["Digit2"] == true;
+    if (!isPaused && person.MP >= 5) isUsedefence = keys["Digit2"] == true;
+    else if (person.MP == 0) isUsedefence = false;
 
     if (isUsedefence == false){     // если не включен щит обычный рисунок 
         context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, 80, 87);
