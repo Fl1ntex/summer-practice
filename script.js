@@ -42,7 +42,8 @@ const FLASH_DURATION = 15;  // сколько времени мана будет
 
 let person_def = {
     x_padding: 0,
-    y_padding: 260,
+    y_padding: 264,
+    defenceTick: 0
 }
 
 
