@@ -13,7 +13,7 @@ strela2.src = "img/strela_2.PNG"
 strela3.src = "img/strela_3.PNG"
 
 bg.src = "img/fon.png";
-runner.src = "img/person.PNG";
+runner.src = "img/person.png";
 runner_defence.src = "img/person1.PNG";
 let isUsedefence = false;   // используем ли щит
 
