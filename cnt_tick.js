@@ -30,6 +30,10 @@ function tick(){
         }
     }
     person_attack_strel();
+    spawnOrc();
+    updateOrcs();
+    checkArrowHits();
+    drawOrcs();
     drawUI(); // отрисовка маны и хп
 
     if (attackCooldown > 0) {
