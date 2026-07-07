@@ -57,7 +57,7 @@ function spriteRunner(){
         }
     }
 
-    isUsedefence = keys["Digit2"] == true;  // щит активен, пока зажата 2
+    
 
     if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0 && isUsedefence == false){
 
