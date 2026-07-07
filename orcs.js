@@ -87,7 +87,7 @@ function updateOrcs() {
         if (dist < 75 && dist > -25 && orc.attackCooldown <= 0 && orc.state !== 'death' && !isUsedefence) {
             orc.state = 'attack';
             orc.frame = 0;
-            attackPlayerFromOrc(orc.level * 8);
+            useHP(orc.level * 8);
             orc.attackCooldown = 40;
         }
 
@@ -112,10 +112,6 @@ function updateOrcs() {
 
         if (orc.x < -300 || orc.x > canvas.width + 400) orcs.splice(i, 1);
     }
-}
-
-function attackPlayerFromOrc(damage) {
-    person.HP = Math.max(0, person.HP - damage);
 }
 
 function checkArrowHits() {
