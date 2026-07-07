@@ -5,7 +5,7 @@ function afk_defecne(){
             person_def.x_padding = 0;
         } 
         else {
-            person_def.x_padding += 120;
+            if (!isPaused) person_def.x_padding += 120;
         }
         person_def.defenceTick = 0;
     }
