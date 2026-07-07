@@ -10,8 +10,18 @@ function tick(){
 
     context.clearRect(0, 0, canvas.width, canvas.height);
     fondraw();
-    context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, 80, 87);
-
+    if (isUsedefence == false){     // если не включен щит обычный рисунок 
+        context.drawImage(runner, person.x_padding, person.y_padding, 120, 130, person.x_pos, person.y_pos, 80, 87);
+    }
+    else { // если вклчюен щит рисуем дургую картинку
+        if (person.x_padding >= 240) {
+            person_def.x_padding = 0;
+        } else {
+            person_def.x_padding += 120;
+        }
+        context.drawImage(runner_defence,person_def.x_padding,person_def.y_padding,120,130,person.x_pos,person.y_pos,80,87);
+    }
+    
     if (person.tick_count > 5) {
         spriteRunner();
         person.tick_count = 0;

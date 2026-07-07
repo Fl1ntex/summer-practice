@@ -2,6 +2,8 @@ let context = canvas.getContext('2d');
 let bg = new Image();
 let runner = new Image();
 
+let runner_defence = new Image();
+
 let strela1 = new Image();
 let strela2 = new Image();
 let strela3 = new Image();
@@ -12,7 +14,8 @@ strela3.src = "img/strela_3.PNG"
 
 bg.src = "img/fon.png";
 runner.src = "img/person.PNG";
-
+runner_defence.src = "img/person1.PNG";
+let isUsedefence = false;   // используем ли щит
 
 let number_strelu = 1;  // qadwfwafafaw
 
@@ -36,6 +39,13 @@ const max_mp = 100; // максимальные хп и мп
 let manaLowFlash = false; // проверка хватает ли маны
 let flashTimer = 0;
 const FLASH_DURATION = 15;  // сколько времени мана будет мигать если ее не хватает
+
+let person_def = {
+    x_padding: 0,
+    y_padding: 260,
+}
+
+
 
 let person = {
     HP: max_hp,

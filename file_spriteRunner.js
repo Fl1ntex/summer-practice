@@ -57,15 +57,16 @@ function spriteRunner(){
         }
     }
 
+    isUsedefence = keys["Digit2"] == true;  // щит активен, пока зажата 2
 
-    if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0){
+    if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0 && isUsedefence == false){
 
         let colvoMP = 0;
         let canAttack = false; // не можем атаковать если нет маны
 
         if (keys["Digit1"] == true) {
             number_strelu = 1;
-            colvoMP = 0;
+            colvoMP = 0;   //  в тз одна стрела энергию не тратит
         } 
         else if (keys["Digit3"] == true) {
             number_strelu = 2;
