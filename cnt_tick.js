@@ -36,6 +36,7 @@ function tick(){
     checkArrowHits();
     drawOrcs();
     drawUI(); // отрисовка маны и хп
+    updateCooldownUI();
 
     document.getElementById('kill-count').textContent = countK; // орисовка cчетчика киллов
 

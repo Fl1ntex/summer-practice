@@ -78,6 +78,7 @@ if (!isUsedefence) {
             canAttack = true;
         } else {
             manaLowFlash = true;
+            triggerSkillFlash(1);
             flashTimer = FLASH_DURATION;
         }
 
@@ -103,6 +104,7 @@ if (!isUsedefence) {
             canAttack = true;
         } else {
             manaLowFlash = true;
+            triggerSkillFlash(3);
             flashTimer = FLASH_DURATION;
         }
 
@@ -128,6 +130,7 @@ if (!isUsedefence) {
             canAttack = true;
         } else {
             manaLowFlash = true;
+            triggerSkillFlash(4);
             flashTimer = FLASH_DURATION;
         }
 

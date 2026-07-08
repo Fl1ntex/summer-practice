@@ -1,0 +1,24 @@
+.Kills {
+    position: absolute;
+    color: aliceblue;
+    margin-left: 580px;
+    margin-bottom: 435px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 0 #000, 0 4px 0 rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.Kills::before {
+  content: "";
+  position: absolute;
+  left: -30px;              /* сдвиг влево: подбери под размер картинки + отступ */
+  top: 52%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/kills.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
