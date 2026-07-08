@@ -97,8 +97,10 @@ function updateOrcs() {
         if (orc.hp <= 0) {
             orcs.splice(i, 1);
             killOrc();
+            addScoreForOrc(orc.level);  
             continue;
         }
+
 
         // Анимация орка
         const frameRate = orc.state === 'attack' ? 4 : 6;

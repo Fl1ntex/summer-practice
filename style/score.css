@@ -1,0 +1,17 @@
+.Score {
+    position: absolute;
+    color: aliceblue;
+    margin-left: 620px;
+    margin-bottom: 435px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 22px;
+    color: rgb(255, 215, 0);
+    text-shadow: 0 2px 0 #000,
+                 0 4px 0 rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.Score::before {
+    content: "⭐ ";
+    font-size: 20px;
+}
