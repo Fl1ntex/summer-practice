@@ -37,8 +37,12 @@ function tick(){
     drawOrcs();
     drawUI(); // отрисовка маны и хп
 
-    if (attackCooldown > 0) {
-        attackCooldown -= 1; // уменьшаем кд каждый кадр
+    document.getElementById('kill-count').textContent = countK; // орисовка cчетчика киллов
+
+    if (!isPaused) {
+        if (cooldown1 > 0) cooldown1--;
+        if (cooldown3 > 0) cooldown3--;
+        if (cooldown4 > 0) cooldown4--;
     }
 
     for (let i = 0; i < strely.length; i++) {
@@ -54,7 +58,7 @@ function tick(){
                 break
         
         }
-        
+
     }
     person.tick_count += 1;
     requestAnimationFrame(tick);

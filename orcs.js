@@ -27,9 +27,9 @@ function createOrc() {
         y: 235 + cfg.yOffset,
         width: cfg.frameWidth * cfg.scale,
         height: cfg.frameHeight * cfg.scale,
-        baseSpeed: 1.85 + level * 0.45,
-        hp: 42 + level * 24,
-        maxHp: 42 + level * 24,
+        baseSpeed: 1.15 + level * 0.45,
+        hp: 42 + level * 18,
+        maxHp: 42 + level * 18,
         level: level,
         state: 'walk',
         frame: 0,
@@ -41,8 +41,8 @@ function createOrc() {
 
 function spawnOrc() {
     if (orcs.length >= 3) return;
-    if (Math.random() < 0.0065) {
-        const count = Math.random() < 0.55 ? 1 : (Math.random() < 0.85 ? 2 : 3);
+    if (Math.random() < 0.009) {
+        const count = Math.random() < 0.45 ? 1 : (Math.random() < 0.85 ? 2 : 3);
         for (let i = 0; i < count; i++) {
             if (orcs.length < 3) orcs.push(createOrc());
         }
@@ -96,6 +96,7 @@ function updateOrcs() {
         // смерть орка
         if (orc.hp <= 0) {
             orcs.splice(i, 1);
+            killOrc();
             continue;
         }
 
@@ -121,7 +122,7 @@ function checkArrowHits() {
             const orc = orcs[o];
             if (a.x + 48 > orc.x && a.x < orc.x + orc.width * 0.75 &&
                 a.y + 38 > orc.y && a.y < orc.y + orc.height * 0.78) {
-                orc.hp -= a.num * 20;
+                orc.hp -= a.num * 15;
                 strely.splice(s, 1);
                 break;
             }

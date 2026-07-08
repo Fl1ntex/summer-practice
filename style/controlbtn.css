@@ -1,0 +1,66 @@
+#attack-panel {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-btn {
+    width: 180px;
+    height: 56px;
+    background: linear-gradient(to bottom, #222, #111);
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    text-align: left;
+    padding: 8px 12px;
+    cursor: default; /* чтобы не было стандартного клика браузера */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+}
+
+/* Эффект при наведении (опционально) */
+.game-btn:hover {
+    border-color: #666;
+}
+
+.btn-key {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 12px;
+    color: #ddd;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.btn-name {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Прогресс-бар внутри кнопки */
+.btn-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    background: linear-gradient(90deg, #ff4444, #ffaa00);
+    transition: width 0.05s linear; /* очень быстрое обновление ширины */
+}
+
+/* Состояние «готово» — делаем полоску зелёной и полной */
+.game-btn.ready .btn-progress {
+    background: #4caf50;
+    width: 100% !important;
+}
+
+/* Затемнение кнопки, когда КД идёт */
+.game-btn.cooldown {
+    opacity: 0.7;
+    filter: brightness(0.85);
+}

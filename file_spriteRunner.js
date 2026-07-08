@@ -61,43 +61,86 @@ function spriteRunner(){
 
     
 
-    if ((keys["Digit1"] == true || keys["Digit3"] == true || keys["Digit4"] == true) && attackCooldown <= 0 && isUsedefence == false){
+const isKey1 = keys["Digit1"] === true;
+const isKey3 = keys["Digit3"] === true;
+const isKey4 = keys["Digit4"] === true;
 
+if (!isUsedefence) {
+    
+    // --- ЛОГИКА ДЛЯ КНОПКИ 1 ---
+    if (isKey1 && cooldown1 <= 0) {
         let colvoMP = 0;
-        let canAttack = false; // не можем атаковать если нет маны
+        let canAttack = false;
+        let number_strelu = 1;
 
-        if (keys["Digit1"] == true) {
-            number_strelu = 1;
-            colvoMP = 0;   //  в тз одна стрела энергию не тратит
-        } 
-        else if (keys["Digit3"] == true) {
-            number_strelu = 2;
-            colvoMP = 10;
-        } 
-        else if (keys["Digit4"] == true) {
-            number_strelu = 3;
-            colvoMP = 30;
-        }
-
-        if (person.MP >= colvoMP){
+        if (person.MP >= colvoMP) {
             useMana(colvoMP);
             canAttack = true;
-        }
-        else {
+        } else {
             manaLowFlash = true;
             flashTimer = FLASH_DURATION;
         }
 
-        if(canAttack){
+        if (canAttack) {
             strely.push({
                 x: person.x_pos + person.x_razmer_na_canvas,
-                y: person.y_pos ,
+                y: person.y_pos,
                 num: number_strelu
             });
-
             kolichestvo_strel += 1;
-            attackCooldown = attackDelay; // сбрасываем задержку
+            cooldown1 = ATTACK_COOLDOWNS[1]; // Ставим кулдаун только для кнопки 1
         }
     }
+
+    // --- ЛОГИКА ДЛЯ КНОПКИ 3 ---
+    if (isKey3 && cooldown3 <= 0) {
+        let colvoMP = 10;
+        let canAttack = false;
+        let number_strelu = 2;
+
+        if (person.MP >= colvoMP) {
+            useMana(colvoMP);
+            canAttack = true;
+        } else {
+            manaLowFlash = true;
+            flashTimer = FLASH_DURATION;
+        }
+
+        if (canAttack) {
+            strely.push({
+                x: person.x_pos + person.x_razmer_na_canvas,
+                y: person.y_pos,
+                num: number_strelu
+            });
+            kolichestvo_strel += 1;
+            cooldown3 = ATTACK_COOLDOWNS[2]; // Ставим кулдаун только для кнопки 3
+        }
+    }
+
+    // --- ЛОГИКА ДЛЯ КНОПКИ 4 ---
+    if (isKey4 && cooldown4 <= 0) {
+        let colvoMP = 30;
+        let canAttack = false;
+        let number_strelu = 3;
+
+        if (person.MP >= colvoMP) {
+            useMana(colvoMP);
+            canAttack = true;
+        } else {
+            manaLowFlash = true;
+            flashTimer = FLASH_DURATION;
+        }
+
+        if (canAttack) {
+            strely.push({
+                x: person.x_pos + person.x_razmer_na_canvas,
+                y: person.y_pos,
+                num: number_strelu
+            });
+            kolichestvo_strel += 1;
+            cooldown4 = ATTACK_COOLDOWNS[3]; // Ставим кулдаун только для кнопки 4
+        }
+    }
+}
 
 }

@@ -28,9 +28,19 @@ let escapePressed = false;
 
 let kolichestvo_strel = 0;
 let strely = []; // массив для хранения стрел
-let speed_strel = 5;     //  скорость полёта стрелы
+let speed_strel = 10;     //  скорость полёта стрелы
 
-let attackCooldown = 0; // кд по русски 
+let cooldown1 = 0;
+let cooldown3 = 0;
+let cooldown4 = 0;
+
+const ATTACK_COOLDOWNS = {
+    1: 50,
+    2: 65,
+    3: 110
+};
+
+
 let attackDelay = 55;   // кадров между выстрелами
 
 const max_hp = 100;
