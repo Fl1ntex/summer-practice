@@ -32,6 +32,7 @@
 }
 
 .start-menu {
+    font-family: 'SF Mono', 'Consolas', monospace;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,63 +46,75 @@
     color: white;
     text-align: center;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 .start-menu h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+    margin: 0px;
+    font-size: 60px;
+    color: #28b12f;
+}
+
+.start-menu h2 {
+    margin-bottom: 0px;
+    font-size: 40px;
+    color: #ffd700;
 }
 
 .option {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 60%;
-    gap: 10%;
+    width: 950px;
+    gap: 70px;
 }
 
 .rules {
     font-size: 25px;
-    width: 700px;
+    width: 800px;
     text-align: justify;
 }
 
 .control {
     font-size: 25px;
     width: 700px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: justify;
 }
 
-.rules h1, .control h1 {
-    text-align: center;
+.control h2{
+    text-align: left;
+    margin-left: 45px;
 }
 
 .start-menu label {
-    display: block;
-    margin: 8px;
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 1.5rem;
+    color: #ffdddd;
 }
 
 .start-menu input {
+    margin-top: 2px;
     padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    border-radius: 6px;
-    border: none;
-    background-color: #333;
-    color: #e0e0e0;
+    font-size: 1.2rem;
+    width: 285px;
+    background: #111;
+    border: 2px solid #555;
+    color: white;
+    border-radius: 8px;
 }
 
 .start-menu button {
-    margin-top: 12px;
-    padding: 12px 28px;
-    font-size: 18px;
+    margin-top: 7px;
+    padding: 10px 40px;
+    font-size: 1.3rem;
+    font-family: 'Press Start 2P', monospace;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     background: #4CAF50;
     color: white;
+    transition: background 0.2s;
+    box-shadow: 0 4px 0 #2b662e;
 }
 
 .start-menu button:hover {
@@ -109,7 +122,7 @@
 }
 
 #start-btn:disabled {
-  background: #2b662e;
+  background: #1d441f;
   cursor: not-allowed;
   opacity: 0.7;
 }
