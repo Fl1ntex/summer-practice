@@ -58,7 +58,11 @@ function tick(){
                 break
         
         }
-
+    }
+    // проверка окончания игры
+    if (checkGameOver()) {
+        requestAnimationFrame(tick);
+        return;
     }
     person.tick_count += 1;
     requestAnimationFrame(tick);
